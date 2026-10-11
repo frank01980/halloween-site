@@ -24,7 +24,8 @@ nav a.l:hover{color:var(--orange)}
 .hero .wrap{display:grid;gap:8px;align-items:center}
 .hero .wrap{max-width:640px;text-align:center}.hero{padding:44px 0 32px}.profile{justify-content:center;text-align:left}.lead{margin-left:auto;margin-right:auto}
 .profile{display:flex;align-items:center;gap:18px}
-.profile img{width:clamp(84px,22vw,130px);aspect-ratio:1;border-radius:50%;border:3px solid var(--orange)}
+.ava{position:relative;flex:none;width:clamp(84px,22vw,130px)}.dot{position:absolute;right:2%;bottom:2%;width:24%;aspect-ratio:1;border-radius:50%;background:var(--green);border:4px solid var(--bg);animation:ping 2s infinite}@keyframes ping{0%{box-shadow:0 0 0 0 rgba(47,209,107,.6)}70%,100%{box-shadow:0 0 0 12px rgba(47,209,107,0)}}
+.profile img{width:100%;aspect-ratio:1;border-radius:50%;border:3px solid var(--orange)}
 .profile h1{margin:0;font-size:clamp(2rem,8vw,3.4rem);line-height:1.05}
 .profile h1 em{font-style:normal;color:var(--orange)}
 .profile small{color:var(--muted);font-size:1rem}
@@ -46,9 +47,9 @@ h2{text-align:center;font-size:clamp(1.5rem,5vw,2.2rem);margin:0 0 8px}
 .search{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:420px;margin:0 auto}
 .search input{flex:1 1 220px;min-width:0;padding:14px 16px;border-radius:12px;border:2px solid var(--purple);background:var(--bg);color:var(--text);font-size:1rem}
 .res{margin-top:18px;min-height:24px;color:var(--muted)}
-.res .av{display:inline-block;background:var(--bg);border:2px solid var(--orange);border-radius:16px;padding:16px;min-width:220px}
-.res img{width:180px;max-width:100%;border-radius:12px}
-.res h3{margin:10px 0 0;color:var(--text)}
+.res .av{display:block;max-width:340px;margin:0 auto;background:linear-gradient(160deg,#2a1650,var(--bg));border:2px solid var(--orange);border-radius:24px;padding:28px 20px 22px;box-shadow:0 0 30px rgba(255,122,26,.25)}
+.res img{display:block;margin:0 auto;width:min(190px,60%);aspect-ratio:1;border-radius:50%;border:4px solid var(--orange);background:#2a1a45;box-shadow:0 0 24px rgba(255,122,26,.45)}
+.res h3{margin:16px 0 2px;color:var(--text);font-size:1.45rem}.res small{color:var(--muted)}
 /* steps */
 .steps{display:grid;gap:14px;counter-reset:s}
 @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
@@ -71,7 +72,7 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;padding:28px 20px ca
 <header class="hero" id="top"><div class="wrap">
  <div>
   <div class="profile">
-   <img src="assets/avatar.png" alt="Halloween avatar">
+   <div class="ava"><img src="assets/avatar.png" alt="Halloween avatar"><span class="dot"></span></div>
    <div><h1>Halloween</h1><small>Roblox creator</small></div>
   </div>
   <p class="lead">Welcome to my official Halloween page. Check out the event, join the fun, and look up any Roblox player's avatar.</p>
